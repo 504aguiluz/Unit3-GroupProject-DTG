@@ -1,4 +1,5 @@
 const db = require('../models');
+
 const index = (req, res) => {
   db.User.find({}, (error, user) => {
       if (error) return res.status(400).json({error: error.message})
@@ -20,7 +21,7 @@ const create = (req, res) => {
       if(error) return res.status(400).json({ error: error.message });
   
       return res.status(200).json({
-        message: `User ${deletedUser.name} deleted successfully`
+        message: `User ${deletedUser.username} deleted successfully`
       });
     });
   };

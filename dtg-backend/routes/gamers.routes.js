@@ -5,5 +5,7 @@ const ctrls = require('../controllers')
 
 router.get('/', ctrls.gamers.index)
 router.post('/', ctrls.gamers.create)
-router.put('/', ctrls.gamers.update)
-router.delete('/', ctrls.gamers.destroy)
+router.put('/:id', ctrls.gamers.update)
+router.delete('/:id', ctrls.gamers.destroy)
+
+module.exports = router
