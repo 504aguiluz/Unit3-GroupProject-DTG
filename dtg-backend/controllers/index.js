@@ -1,8 +1,8 @@
 module.exports = {
-	bookmarks: require('./user.ctrls')
+	users: require('./user.ctrls')
 }
 
 module.exports = {
-	bookmarks: require('./gamers.ctrls')
+	gamers: require('./gamers.ctrls')
 }
 

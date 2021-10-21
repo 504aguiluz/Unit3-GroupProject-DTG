@@ -1,6 +1,6 @@
 const db = require('../models');
 const index = (req, res) => {
-  db.gamer.find({}, (error, gamer) => {
+  db.Gamer.find({}, (error, gamer) => {
       if (error) return res.status(400).json({error: error.message})
 
       return res.status(200).json(gamer)
@@ -8,7 +8,7 @@ const index = (req, res) => {
 }
   
 const create = (req, res) => {
-    db.gamer.create(req.body, (error, createdGamer) => {
+    db.Gamer.create(req.body, (error, createdGamer) => {
       if(error) return res.status(400).json({ error: error.message });
   
       return res.status(201).json(createdGamer); //  .json() will send proper headers in response so client knows it's json coming back
@@ -16,7 +16,7 @@ const create = (req, res) => {
   };
 
   const destroy = (req, res) => {
-    db.gamer.findByIdAndDelete(req.params.id, (error, deletedGamer) => {
+    db.Gamer.findByIdAndDelete(req.params.id, (error, deletedGamer) => {
       if(error) return res.status(400).json({ error: error.message });
   
       return res.status(200).json({
@@ -26,7 +26,7 @@ const create = (req, res) => {
   };
 
   const update = (req, res) => {
-    db.gamer.findByIdAndUpdate(
+    db.Gamer.findByIdAndUpdate(
       req.params.id, 
       {
         $set: req.body

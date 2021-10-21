@@ -28,6 +28,6 @@ function arrMin(val){
     return val.length >= 3
 }
 
-const GAmer = mongoose.model('Gamer', gamerSchema)
+const Gamer = mongoose.model('Gamer', gamerSchema)
 
 module.exports = Gamer
