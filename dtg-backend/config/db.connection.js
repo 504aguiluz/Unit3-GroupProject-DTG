@@ -12,8 +12,8 @@ mongoose.connect(connectionStr, {
 
 // == connection updates ==
 
-mongoose.connection.on('connected', () => console.log('mongodb connected and happy'))
+mongoose.connection.on('connected', () => console.log('Mongodb connected 😊'))
 
-mongoose.connection.on('error', (error) => console.log('mongodb error', error))
+mongoose.connection.on('error', (error) => console.log('Mongodb error', error))
 
-mongoose.connection.on('disconnected', ()=> console.log('mongodb disconnected and sad'))
+mongoose.connection.on('disconnected', ()=> console.log('Mongodb disconnected 😢'))
